@@ -61,6 +61,15 @@ const Sidebar = ({ isCollapsed, setIsCollapsed }) => {
         { label: 'Brands', path: '/admin/brands' },
       ],
     },
+    // Order management 
+    {
+      icon: ShoppingBagIcon,
+      label: 'Orders',
+      menuName: 'OrderMenu',
+      path: '/admin/order',
+      submenu: false,   
+    },
+
   ];
 
   return (

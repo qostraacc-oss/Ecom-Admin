@@ -35,6 +35,8 @@ function App() {
             <Route path="subcategories" element={<SubCategories />} />
             <Route path="attributes" element={<Attributes />} />
             <Route path="brands" element={<Brands />} />
+            <Route path="products/create" element={<ProductForm/>}/>
+            <Route path='order' element={<div>orders</div>}/>
           </Route>
 
           <Route path="/" element={<Navigate to="/login" replace />} />
