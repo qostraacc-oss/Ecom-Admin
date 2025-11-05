@@ -8,12 +8,14 @@ export const useAuth = () => useContext(AuthContext);
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true);    // start true to handle initial loading state
+  const [loading, setLoading] = useState(true); 
   const [error, setError] = useState(null);
 
   const checkAuthenticated = useCallback(async () => {
     try {
       const response = await httpClient.get('/accounts/is-authenticated/');
+      console.log(response.data);
+      
       const isAuth = response?.data?.authenticated === true;
       setIsAuthenticated(isAuth);
       if (isAuth) {
