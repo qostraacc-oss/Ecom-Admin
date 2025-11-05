@@ -531,13 +531,13 @@ const ProductForm = () => {
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
           />
           {mediaPreviews.length > 0 && (
-            <div className="mt-3 grid grid-cols-4 gap-3">
+            <div className="mt-3 grid grid-cols-3 md:grid-cols-6 gap-3">
               {mediaPreviews.map((preview, idx) => (
                 <div key={idx} className="relative">
                   <img
                     src={preview}
                     alt={`Preview ${idx}`}
-                    className="h-24 w-full object-cover rounded border border-gray-200"
+                    className="h-24 w-full object-contain rounded border border-gray-200"
                   />
                   <button
                     type="button"
