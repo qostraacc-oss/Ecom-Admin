@@ -3,7 +3,7 @@ import { BellIcon, UserCircleIcon } from '@heroicons/react/24/outline';
 import { useAuth } from '../../context/AuthContext';
 
 const Navbar = () => {
-  const { user } = useAuth();
+  const { user,logout } = useAuth();
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [isNotificationOpen, setIsNotificationOpen] = useState(false);
 
@@ -73,7 +73,7 @@ const Navbar = () => {
                     <button className="text-left px-4 py-2 rounded hover:bg-gray-100 text-sm text-gray-700 transition-colors">
                       Change Password
                     </button>
-                    <button className="text-left px-4 py-2 rounded hover:bg-gray-100 text-sm text-red-700 transition-colors">
+                    <button onClick={logout} className="text-left px-4 py-2 rounded hover:bg-gray-100 text-sm text-red-700 transition-colors">
                       Logout
                     </button>
                   </div>
