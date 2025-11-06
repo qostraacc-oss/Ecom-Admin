@@ -66,7 +66,7 @@ const Sidebar = ({ isCollapsed, setIsCollapsed }) => {
       icon: ShoppingBagIcon,
       label: 'Orders',
       menuName: 'OrderMenu',
-      path: '/admin/order',
+      path: '/admin/orders',
       submenu: false,   
     },
 
